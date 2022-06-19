@@ -8,11 +8,13 @@ const UserSchema = new Schema({
   email: {
     type: String
   },
-  role: {
-    type: String,
-    enum: ['user', 'editor', 'admin'],
-  },
   password: {
     type: String
   },
+  shopping_history: {
+    type: Array,
+    ref: 'Product',
+  }
 });
+
+module.exports = mongoose.model('User', UserSchema);

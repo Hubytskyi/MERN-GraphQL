@@ -8,4 +8,10 @@ const CategorySchema = new Schema({
   slug: {
     type: String
   },
+  products: {
+    type: Array,
+    ref: 'Product'
+  }
 });
+
+module.exports = mongoose.model('Category', CategorySchema);

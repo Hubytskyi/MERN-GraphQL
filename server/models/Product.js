@@ -8,6 +8,9 @@ const ProductSchema = new Schema({
   slug: {
     type: String
   },
+  sku: {
+    type: String
+  },
   price: {
     type: String
   },
@@ -19,3 +22,5 @@ const ProductSchema = new Schema({
     ref: 'Category'
   },
 });
+
+module.exports = mongoose.model('Product', ProductSchema);
